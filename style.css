@@ -1,0 +1,121 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    295deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(228, 224, 215, 1) 100%
+  );
+  margin: 0px;
+  font-family: "Baloo Tammudu 2", cursive;
+  padding: 16px;
+  text-align: left;
+}
+
+h2 {
+  font-family: serif;
+}
+.center {
+  margin: 0px;
+  margin: -18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.emoj::before {
+  content: "🖥️";
+  color: red;
+}
+
+.emoj_2::after {
+  content: "🖱️";
+  padding-left: 5px;
+  color: azure;
+}
+
+.emoj_2::before {
+  content: "⌨️";
+  color: azure;
+  padding-right: 5px;
+}
+.main-text {
+  background-color: rgb(230 229 228);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 18px;
+  border-bottom: 2px solid black;
+}
+
+.bar {
+  padding: 10px;
+}
+
+.article {
+  margin-top: 20px;
+}
+
+.experiences {
+  display: inline-grid;
+}
+
+.subheading {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* Navbar */
+.navbar {
+  margin: 30px;
+  padding: 5px;
+}
+
+.navbartop {
+  padding-bottom: 10px;
+}
+
+/* Nav effects with mous */
+.navbar:link {
+  color: brown;
+}
+.navbar:visited {
+  color: rgb(116, 108, 108);
+}
+.navbar:hover {
+  color: rgb(235, 122, 70);
+  background-color: rgb(231, 217, 139);
+  transition: 1s;
+  text-decoration: none;
+}
+
+.navbar:active {
+  color: rgb(0, 0, 0);
+  background-color: darkgray;
+}
+
+.article {
+  position: relative;
+  left: -7px;
+}
+
+.hire_me {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  text-align: center;
+  padding: 8px;
+  padding-bottom: 0px;
+  border-radius: 4px;
+  background: #af1717;
+  color: black;
+}
