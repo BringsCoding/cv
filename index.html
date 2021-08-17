@@ -1,89 +1,127 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta author="Simon" descripition="CV" />
+    <title>CV-from-Simon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/normalize.css@8.0.1/normalize.css"/>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
-    <title>CV-from Simon</title>
+      href="https://unpkg.com/browse/normalize.css@7.0.0/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="main.js"></script>
   </head>
   <body>
-    <!-- nav -->
-    <aside class="hire_me">hire me</aside>
-    <div class="center">
-      <div class="emoj">
-       <header><h1>CV - from Simon</h1></header>
+    <!-- Top-Bar -->
+    <header class="top">
+      <div class="top-name">
+        <h1 class="top-myname">Simon Brings</h1>
       </div>
-    <nav>  
-      <div class="navbartop">
-    <a class="navbar" href="#working">Infos</a>
-    <a class="navbar" href="#infos">Working</a>
-    <a class="navbar" href="#skills">Skills</a>
-    <a class="navbar" href="#contact">contact</a> 
-  </div> 
-  </nav>
-    
-    <h2>Profile</h2> 
-     
-    <h3><em><div class="emoj_2">25 years old from Germany ,i living in grevenbroich.</em></div></h3>
-     
-    <main>
-    </div>
-    <div class="main-text">
-      <!--Working experiens-->
-        <article id="working" class="article"><h2>Working experiences</h2></article>
-         <section>I have working <strong> 5 years</strong> in the print industrie</br>
-        learn the coding by <strong>Bootcamp Europa</strong> in Germany</br>
-      </section></article>
-    </div> 
-
-      <!--Infos about me-->
-    <div class="main-text">
-     <header>
-      <article id="infos"></article> 
-      <div class="experiences article">
-      <strong><h2>infos</h2></strong><br></div>
-      <p class="subheading">1900-2000</p>
-         
-      
-      
-        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Possimus, autem necessitatibus. Modi magnam consectetur reiciendis a id aperiam cupiditate totam eveniet excepturi! </br> 
-          Expedita deserunt debitis inventore perferendis totam excepturi cupiditate!</article>
-      </header> 
-    </div>
-
-        <!--my hard and soft skills-->
-      <div class="main-text">
-          <article id="skills" class="article"><h2>skills</h2></article>
-        <section><ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>excel</li>
-        </ul>
+      <!-- Beginn Navigations -->
+      <nav class="my-nav">
+        <a class="link-nav" href="#a">Profil</a>
+        <a class="link-nav" href="#b">Experience</a>
+        <a class="link-nav" href="#c">Skills</a>
+        <a class="link-nav" href="#d">Contact</a>
+      </nav>
+      <p class="top-slogan">24 years old and from Germany</p>
+      <aside class="hire-me">Hire me!</aside>
+    </header>
+    <!-- Beginn des Hauptteiels  -->
+    <main class="surface">
+      <article id="a">
+        <h2 class="heading profilhead">Profil</h2>
+        <p class="textProfil">
+          Hello and welcome to my curriculum vitae I am Simon 24 years old and
+          come from Grevenbroich (near Cologne) what makes me fun I want to make
+          a profession!
+          <em>Programming is like magic</em>
+        </p>
+      </article>
+      <article id="b">
+        <h2 class="heading">Experience</h2>
+        <div class="grid-content">
+        <section>
+          <header>
+            <h3 class="mini-heading-one">Training as a printer</h3>
+            <p class="text-after-mini-heading-one">From 2016-2019</p>
+          </header>
+          <p>
+            I have completed a three-year apprenticeship in the printing sector.
+            I completed my training in a company in Cologne. After the 3 years I
+            changed to a company near Hückelhoven where I worked in the field of
+            label printing for 2 years.
+          </p>
         </section>
-        <div class="article">
-        <article><h2>Hard skills</h2></article></div>
-        <ol type="I">
-        <li>Play Guitar</li>
+        <section>
+          <header>
+            <h3 class="mini-heading-one">Bootcamp Europe Completed</h3>
+            <p class="text-after-mini-heading-one">Summer 2021</p>
+          </header>
+          <p>
+            In the summer of 2021 I completed the training camp of Bootcamp
+            Europe. In this camp I built this project for example. I learned how
+            to use the programming languages HTML/CSS/JavaScript. I have decided
+            for a new orientation because IT excites me and programming and
+            solving problems is fun.
+          </p>
+          </div>
+        </section>
+      </article>
+      <article id="c">
+        <h2 class="heading">Skills</h2>
+        <div class="grid-content">
+          <section>
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Hard Skills</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </section>
+        </div>
+      </article>
+      <article id="d">
+        <h2 class="heading">Contact</h2>
+        <ol>
+          <li>GitHube</li>
+          <li>
+            E-mail
+            <a href="mailto:xy.de"> xy at xy . com </a>
+          </li>
+          <li>
+            Mobil-phone <br />
+            nummber: 00000000
+          </li>
         </ol>
-      </div>
-
-        <!--Contact-->
-      <div class="main-text">
-        <article>
-        <h2 id="contact" class="article">contact</h2><ol>
-          <li><a href="https://www.github.com/">Github</a></li>
-          <li><a href="mailto:robin@batman.com">Email</a></li>
-          <li>Telefon: 0000000000000</li>
-          </ol>
-      </div>
+      </article>
     </main>
-  </div>
+    <footer class="footer">
+      <p class="footer-text">
+        Did you like my CV?
+        <a class="footer-link" href="mailto:unbekannt@unbekannt.de"
+          >Contact me!</a
+        >
+      </p>
+    </footer>
   </body>
-  </html>
+</html>
