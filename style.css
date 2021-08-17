@@ -1,121 +1,272 @@
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.875rem;
+  background-color: rgb(73, 73, 73);
+  -webkit-print-color-adjust: exact;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", sans-serif;
 }
 
 body {
-  background: rgb(34, 193, 195);
-  background: linear-gradient(
-    295deg,
-    rgba(34, 193, 195, 1) 0%,
-    rgba(228, 224, 215, 1) 100%
+  margin: 0;
+  --hire-me-tab: darkgoldenrod;
+  --test: yellow;
+  --blog-color: rgb(0, 255, 255);
+  --hire-me-color: rgb(60, 44, 204);
+  --background-top: linear-gradient(
+    145deg,
+    rgba(171, 184, 15, 1) 0%,
+    rgba(204, 13, 13, 1) 100%
   );
-  margin: 0px;
-  font-family: "Baloo Tammudu 2", cursive;
-  padding: 16px;
-  text-align: left;
 }
 
-h2 {
-  font-family: serif;
+/* Änderung der Farbe bei der Markierung */
+*::selection {
+  background-color: rgb(83, 143, 23);
 }
-.center {
-  margin: 0px;
-  margin: -18px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+
+/* änderung der Gesamten Top Box */
+.top {
+  padding: 3rem 1rem;
+  padding-top: 4.5rem;
   text-align: center;
-  border-bottom: 2px solid black;
-}
-
-.emoj::before {
-  content: "🖥️";
-  color: red;
-}
-
-.emoj_2::after {
-  content: "🖱️";
-  padding-left: 5px;
-  color: azure;
-}
-
-.emoj_2::before {
-  content: "⌨️";
-  color: azure;
-  padding-right: 5px;
-}
-.main-text {
-  background-color: rgb(230 229 228);
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 18px;
-  border-bottom: 2px solid black;
-}
-
-.bar {
-  padding: 10px;
-}
-
-.article {
-  margin-top: 20px;
-}
-
-.experiences {
-  display: inline-grid;
-}
-
-.subheading {
-  display: inline-block;
-  margin-left: 10px;
-}
-
-/* Navbar */
-.navbar {
-  margin: 30px;
-  padding: 5px;
-}
-
-.navbartop {
-  padding-bottom: 10px;
-}
-
-/* Nav effects with mous */
-.navbar:link {
-  color: brown;
-}
-.navbar:visited {
-  color: rgb(116, 108, 108);
-}
-.navbar:hover {
-  color: rgb(235, 122, 70);
-  background-color: rgb(231, 217, 139);
-  transition: 1s;
-  text-decoration: none;
-}
-
-.navbar:active {
-  color: rgb(0, 0, 0);
-  background-color: darkgray;
-}
-
-.article {
+  background: rgb(171, 184, 15);
+  background: var(--background-top);
   position: relative;
-  left: -7px;
+}
+/* Veränderung des text in der Top-Box von meinem Namen */
+.top-name {
+  font-size: 4rem;
+}
+/* Größen änderung von meinem Namen */
+.top-myname {
+  font-size: 1em;
+}
+/* Großen änderung von meinem Solgan "24 years old an from Germany" */
+.top-slogan {
+  font-size: 1.25em;
 }
 
-.hire_me {
+.top-slogan::after {
+  content: "🖱️";
+  color: aqua;
+}
+
+.top-slogan::before {
+  content: "⌨️";
+  color: aliceblue;
+}
+
+.my-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Die Navigation bricht um */
+@media screen and (min-width: 760px) {
+  .my-nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Zieht die Navigations auseinander | bearbeitung der Nav */
+.link-nav {
+  font-size: 1.25rem;
+  padding: 0.25rem 1.5rem;
+  color: rgb(43, 226, 52);
+  text-decoration: none;
+  font-family: "Big Shoulders Stencil Display", cursive;
+  transition: 0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+}
+
+/* Änderung des button Hire-me */
+.hire-me {
   position: absolute;
-  right: 16px;
-  top: 16px;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgb(83, 143, 23);
+  color: cornsilk;
+  opacity: 1.6;
+  transform-origin: top right;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+/* wenn man mit der Maus drüber fährt */
+.link-nav:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(93, 93, 93);
+  text-decoration: underline;
+  outline: 3px solid red;
+  outline-style: groove;
+}
+
+/* Wenn man draufklickt in diesem Moment */
+.link-nav:active {
+  color: rgb(200, 197, 38);
+  background-color: rgb(25, 73, 206);
+}
+
+/* Hire-me button wird größer */
+.top:hover .hire-me {
+  opacity: 1;
+  transform: scale(1.7);
+}
+
+/* Hire-me/farbe ändert sich mit Tab-taste */
+.top:focus-within .hire-me {
+  transform: scale(1.7);
+  background-color: var(--hire-me-tab);
+}
+.link-nav:focus {
+  background-color: rgb(250, 250, 250);
+  transition: 0.5s ease-out;
+  outline: 4px solid red;
+}
+
+/* Ende des Top und der Navigation  
+!
+!
+!
+!*/
+
+/* Beginn des Hauptteiles
+!
+!
+!
+ */
+
+/* Bringt den "Blog-Beitrag" mittig */
+
+.surface {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--blog-color);
+}
+
+/* Rückt die Überschriften nacht Rechts */
+.heading {
+  position: relative;
+  left: -1rem;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+}
+
+main > * + * {
+  border-top: 5px solid rgb(12, 197, 27);
+  padding-left: 1rem;
+}
+.profilhead {
+  padding-left: 1rem;
+}
+
+.textProfil {
+  padding-left: 1rem;
+}
+
+/* Bringt die Überschrift und die Jahre zusammen */
+.mini-heading-one {
+  display: inline-block;
+  margin-bottom: 1px;
+}
+.text-after-mini-heading-one {
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+/* Größe änderung */
+.footer {
+  background-color: rgb(171, 184, 15);
+  background: linear-gradient(
+    145deg,
+    rgba(171, 184, 15, 1) 0%,
+    rgba(204, 13, 13, 1) 100%
+  );
+  padding: 3rem;
+}
+/* Fabre und Text des Footers */
+.footer-text {
   text-align: center;
-  padding: 8px;
-  padding-bottom: 0px;
-  border-radius: 4px;
-  background: #af1717;
-  color: black;
+  margin: 0px;
+}
+/* Farbe und Text des Link */
+.footer-link {
+  background-color: var(--background-top);
+  color: rgb(243, 243, 243);
+  text-decoration: wavy;
+  border-bottom: 1px solid;
+}
+
+/* Media Sektion */
+
+/* änderung ab 700px */
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 14px;
+    background-color: rgb(139, 143, 161);
+  }
+}
+
+/* Große der Kompletten Fläsche */
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 18px;
+    background-color: gainsboro;
+  }
+}
+
+/* Ab 900 Hire-me button änderung der Farbe */
+@media screen and (max-width: 900px) {
+  .hire-me {
+    position: fixed;
+    background-color: var(--hire-me-color);
+  }
+}
+
+@media print {
+  .hire-me {
+    display: none;
+  }
+
+  .my-nav {
+    display: none;
+  }
+}
+
+/* Spricht die Klassen in voller breite an */
+@media screen and (min-width: 768px) {
+  .surface > * + * {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+  .grid-content {
+    margin-top: 4rem;
+  }
+}
+/* Grid wirkt hier bei 768px */
+@media screen and (min-width: 768px) {
+  .textProfil {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 9.9rem;
+  }
 }
